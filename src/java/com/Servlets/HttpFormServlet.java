@@ -32,6 +32,9 @@ public class HttpFormServlet extends HttpServlet{
                 out.println("<h2> Email :" + email + "</h2>");
                 out.println("<h2> Gender :" + gender + "</h2>");
                 out.println("<h2> Selected Language :" + language + "</h2>"); 
+                
+                RequestDispatcher rd = request.getRequestDispatcher("Respnsepage.html");
+                rd.include(request, response);
             }
             
         }else{
