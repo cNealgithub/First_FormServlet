@@ -1,5 +1,6 @@
 package com.Servlets;
 
+import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -34,7 +35,12 @@ public class HttpFormServlet extends HttpServlet{
             }
             
         }else{
-            out.println("<h1> You have not Agreed to the Terms and Conditions </h1>");
+            out.println("<h2> You have not Agreed to the Terms and Conditions </h2>");
+            //i want to include the index.html pages response in this page 
+            //so i will use RequestDispatcher interface's include() mrthod
+            
+            RequestDispatcher rdsp = request.getRequestDispatcher("index.html");
+            rdsp.include(request, response);
         }
     }
     

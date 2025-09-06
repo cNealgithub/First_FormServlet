@@ -5,6 +5,10 @@
 	 xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd"
 	 version="6.0">
 
+    <welcome-file-list>
+        <welcome-file>home.html</welcome-file>
+    </welcome-file-list>
+    
     <servlet>
         <servlet-name>FormServlet</servlet-name>
         <servlet-class>com.Servlets.HttpFormServlet</servlet-class>
@@ -14,5 +18,12 @@
         <servlet-name>FormServlet</servlet-name>
         <url-pattern>/formServlet</url-pattern>
     </servlet-mapping>
+    
+    <servlet>
+        <servlet-name>SuccessServlet</servlet-name>
+        <servlet-class>com.Servlets.SuccessServlet</servlet-class>
+    </servlet>
+    
+    
     
 </web-app>
